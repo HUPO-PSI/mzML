@@ -1,0 +1,35 @@
+TO DO
+============
+The following items should still be done before the mzML format is fully
+released as version 1.0.
+
+Schema changes
+--------------
+- Decide how to solve the "new CV term problem" based on community advice
+
+
+Controlled Vocabulary changes
+-----------------------------
+- Ask all vendors to update the CV as relates to their products
+
+
+Additional instance documents
+-----------------------------
+- Create one that demonstrates the use of the acquisitionList and acquisition (essentially, one precursor scan, three MS/MS scans, that are then combined)
+- Create an example that shows a nice usage of CV in the 'sample' element (NEWT, Brenda, Cell Type Ontology, ...)
+- Create one that demonstrates a MALDI run
+- Create one that demonstrates a mzML file made from a list of dtas
+
+
+Software implementations
+------------------------
+- Catalog and advertise all (pre-release) implementations of mzML format
+
+
+Desired Release schedule
+----------------
+ October  1  Submission to PSI Document Process
+ October 30  Internal PSI review complete and feedback returned
+November 10  Start of 60 day public review
+ January 15  Release of mzML 1.0.0
+

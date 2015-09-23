@@ -1,0 +1,24 @@
+[mzML]
+The <mzML> element and all content below may occur by itself in an XML document,
+but is also designed to be wrapped in the mzML indexing schema in order to
+facilitate random access within the file with appropriate reader software.
+
+[cvList]
+One of the <cv> elements in this list must be the PSI MS controlled vocabulary.
+All <cvParam> elements in the document MUST refer to one of the <cv> elements
+in this list.
+
+
+
+[MISCpeaklist]
+Peak lists are processed data from a mass spectrometry experiment. There can be 
+multiple peak lists in an mzML file, which might be related via a separation, 
+or just in sequence from an automated run. Any one peak list (mass spectrum) 
+may also be composed of a number of acquisitions, which can be described 
+individually herein.
+
+[spectrum]
+id's must be unique within a file. They may be LSIDs or simply the scan
+number. scanNumbers must be unique within a file and must be monotonically
+increasing throughout the file, although not necessarily sequentially.
+
