@@ -1,4 +1,4 @@
-## mzIdentML - Reporting Identifications in MS-based Proteomics Experiments
+## mzML - Reporting Spectra Information in MS-based experiments
 
 
 ## General
