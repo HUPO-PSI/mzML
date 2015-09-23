@@ -1,0 +1,14 @@
+<objectRuleList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.psidev.info/files/validator/object-rule.xsd">
+    <!-- List of rules that this specific validator should use (Provide class names)-->
+    <!-- <rule class="psidev.psi.ms.object_rules.TemplateObjectRule"/> -->
+    <rule class="psidev.psi.ms.object_rules.InstrumentConfigurationObjectRule"/>
+    <rule class="psidev.psi.ms.object_rules.MatrixSolutionObjectRule"/>
+    <rule class="psidev.psi.ms.object_rules.OtherSourceObjectRule"/>
+    <rule class="psidev.psi.ms.object_rules.LaserWavelengthObjectRule"/>
+    <rule class="psidev.psi.ms.object_rules.SpectrumObjectRule"/>
+    <rule class="psidev.psi.ms.object_rules.SoftwareListObjectRule"/>
+    <rule class="psidev.psi.ms.object_rules.ExplicitAcquisitionParametersObjectRule"/>
+    <rule class="psidev.psi.ms.object_rules.AcquisitionParametersFileRefObjectRule"/>
+    <rule class="psidev.psi.ms.object_rules.MassSpectraOrParameterFileInSourceFileListObjectRule"/>
+</objectRuleList>
