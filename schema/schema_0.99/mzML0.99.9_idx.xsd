@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://psi.hupo.org/schema_revision/mzML_0.99.9" targetNamespace="http://psi.hupo.org/schema_revision/mzML_0.99.9" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.99.9">
+	<xs:include schemaLocation="mzML0.99.9.xsd"/>
+	<xs:element name="indexedmzML">
+		<xs:annotation>
+			<xs:documentation>Container element for mzML which allows the addition  of an index.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="mzML"/>
+				<xs:element name="indexList" minOccurs="1">
+					<xs:annotation>
+						<xs:documentation>List of indices.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>							
+							<xs:element name="index" minOccurs="1" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Index element containing one or more offsets for random data access for the entity described in the 'name' attribute.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="offset" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>File pointer offset (in bytes) of the element identified by the 'id' attribute.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:long">
+														<xs:attribute name="idRef" type="xs:IDREF" use="required">
+															<xs:annotation>
+																<xs:documentation>Reference to the 'id' attribute of the indexed element.</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="nativeID" type="xs:string" use="required">
+															<xs:annotation>
+																<xs:documentation>The native identifier for the spectrum, used by the acquisition software.</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="name" type="xs:string" use="required">
+										<xs:annotation>
+											<xs:documentation>The name of the entity the index entries are pointing to.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="count" type="xs:nonNegativeInteger" use="required">
+							<xs:annotation>
+								<xs:documentation>Number of indices in this list.</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="indexListOffset" type="xs:long" nillable="1">
+					<xs:annotation>
+						<xs:documentation>File pointer offset (in bytes) of the 'indexList' element.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="fileChecksum" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>SHA-1 checksum from beginning of file to end of 'fileChecksum' open tag.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

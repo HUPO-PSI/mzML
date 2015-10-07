@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleFilter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://proteo.cnb.csic.es/miape-api/schemas/ruleFilter_v1.2.xsd">
+	<userConditions>
+		<userCondition id="MALDI_OR_ESI">
+			<userOption id="MALDI">
+				<objectRuleToSkip id="OtherSourceObjectRule"/>
+				<rulesToSkipRef ref="esi_cv_rules"/>
+			</userOption>
+			<userOption id="ESI">
+				<objectRuleToSkip id="OtherSourceObjectRule"/>
+				<rulesToSkipRef ref="maldi_cv_rules"/>
+			</userOption>
+			<userOption id="OTHER">
+				<rulesToSkipRef ref="maldi_cv_rules"/>
+				<rulesToSkipRef ref="esi_cv_rules"/>
+			</userOption>
+		</userCondition>
+	</userConditions>
+	<objectRuleConditions>
+		<!-- if there is an acquisition parameter file, no need to have an explicit description of the parameters -->
+		<objectRuleCondition valid="true" id="AcquisitionParametersFileRefObjectRule">
+			<objectRuleToSkip id="ExplicitAcquisitionParametersObjectRule"/>
+		</objectRuleCondition>
+		<!-- if there is an explicit description of the parameters, no need to have an acquisition parameter file -->
+		<objectRuleCondition valid="true" id="ExplicitAcquisitionParametersObjectRule">
+			<objectRuleToSkip id="AcquisitionParametersFileRefObjectRule"/>
+			<objectRuleToSkip id="ParameterFileInSourceFileListObjectRule"/>
+		</objectRuleCondition>
+	</objectRuleConditions>
+	<cvMappingRuleConditions>
+		<!-- if analyzer != TOF then skip analyzer_reflectron_must -->
+		<cvMappingRuleCondition valid="false" id="analyzer_tof_may">
+			<cvMappingRuleToSkip id="analyzer_reflectron_must"/>
+		</cvMappingRuleCondition>
+	</cvMappingRuleConditions>
+	<references>
+		<referencedRules id="esi_cv_rules">
+			<cvMappingRuleToSkip id="source_esi_type_must"/>
+			<cvMappingRuleToSkip id="source_esi_may"/>
+			<cvMappingRuleToSkip id="source_esi_must"/>
+		</referencedRules>
+		<referencedRules id="maldi_cv_rules">
+			<cvMappingRuleToSkip id="source_maldi_type_must"/>
+			<cvMappingRuleToSkip id="source_maldi_must"/>
+			<cvMappingRuleToSkip id="psd_lid_isd_maldi_should"/>
+			<cvMappingRuleToSkip id="source_maldi_should"/>
+			<objectRuleToSkip id="MatrixSolutionObjectRule"/>
+			<objectRuleToSkip id="LaserWavelengthObjectRule"/>
+		</referencedRules>
+	</references>
+	<mandatoryElements>
+		<mandatoryMzMLElement mzMLElement="FileDescription"/>
+		<mandatoryMzMLElement mzMLElement="Software"/>
+		<mandatoryMzMLElement mzMLElement="DataProcessingList"/>
+		<mandatoryMzMLElement mzMLElement="SourceFileList"/>
+		<mandatoryMzMLElement mzMLElement="SourceComponent"/>
+	</mandatoryElements>
+</ruleFilter>

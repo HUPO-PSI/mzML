@@ -1,0 +1,15 @@
+<cvSourceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.psidev.info/files/validator/CvSourceList.xsd">
+	<!-- <CVSource source="psidev.psi.tools.ontology_manager.impl.local.LocalOntology" uri="file:///D:/lennart/ebi/projects/HUPO/PSI/MS/cvs_files/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo" format="OBO" name="PSI-MS" identifier="MS" version="1.01"/> -->
+    <cvSource source="psidev.psi.tools.ontology_manager.impl.local.LocalOntology" uri="http://obo.cvs.sourceforge.net/*checkout*/obo/obo/ontology/phenotype/unit.obo" format="OBO" name="Unit Ontology" identifier="UO" version="NA"/>
+    <cvSource source="psidev.psi.tools.ontology_manager.impl.local.LocalOntology" uri="http://psidev.cvs.sourceforge.net/*checkout*/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo" format="OBO" name="PSI-MS" identifier="MS" version="1.01"/>
+    <!-- <CVSource uri="newt.obo?" format="OBO" name="NEWT taxonomy" identifier="NEWT" version="18/06/07"/> -->
+	<cvSource source="psidev.psi.tools.ontology_manager.impl.ols.OlsOntology" uri="http://www.brenda-enzymes.info/ontology/tissue/tree/update/update_files/BrendaTissueOBO" format="OBO" name="BrendaTissue" identifier="BTO" version="1.258"/>
+	<cvSource source="psidev.psi.tools.ontology_manager.impl.ols.OlsOntology" uri="http://pride-proteome.cvs.sourceforge.net/*checkout*/pride-proteome/PRIDE/schema/pride_cv.obo" format="OBO" name="PRIDE Ontology" identifier="PRIDE" version="1.54"/>
+	<cvSource source="psidev.psi.tools.ontology_manager.impl.ols.OlsOntology" uri="http://obo.cvs.sourceforge.net/*checkout*/obo/obo/ontology/genomic-proteomic/gene_ontology.obo" format="OBO" name="Gene Ontology" identifier="GO" version="4.246"/>
+	<cvSource source="psidev.psi.tools.ontology_manager.impl.ols.OlsOntology" uri="http://obo.cvs.sourceforge.net/*checkout*/obo/obo/ontology/phenotype/quality.obo" format="OBO" name="Phenotypic qualities (properties)" identifier="PATO" version="NA"/>
+
+
+
+</cvSourceList>
+
