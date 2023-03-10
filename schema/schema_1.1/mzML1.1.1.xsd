@@ -539,15 +539,15 @@
           </xs:element>
         </xs:sequence>
         <xs:attribute name="id" use="required">
+          <xs:annotation>
+            <xs:documentation>A unique string identifier for this run.</xs:documentation>
+          </xs:annotation>
           <xs:simpleType>
             <xs:restriction base="xs:string">
               <xs:whiteSpace value="replace"/>
               <xs:pattern value="[^ ]+"/>
             </xs:restriction>
           </xs:simpleType>
-          <xs:annotation>
-            <xs:documentation>A unique string identifier for this run.</xs:documentation>
-          </xs:annotation>
         </xs:attribute>
         <xs:attribute name="defaultInstrumentConfigurationRef" type="xs:IDREF" use="required">
           <xs:annotation>
