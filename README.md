@@ -32,10 +32,9 @@ The description of mass spectrometry data output and its experimental context re
  
 This document defines a specification and is not a tutorial. As such, the presentation of technical details is deliberately direct. The role of the text is to describe the schema model and justify design decisions made. This document does not provide comprehensive examples of the schema in use. Example documents are provided separately and should be examined in conjunction with this document. It is anticipated that tutorial material will be developed in the future to aid implementation. Although the present specification document describes constraints and guidelines related to the content of an mzML document as well as the availability of tools helping to read and write mzML, it does not describe any implementation constraints or specifications such as coding language or operating system for software that will generate and/or read mzML data. 
 
-When you use mzIdentML format, please cite the following publication:
+When you use mzML format, please cite the following publication:
 
 Martens L., Chambers M., Sturm M., Kessner D., Levander F., Shofstahl J., Tang W.H., Römpp A., Neumann S., Pizarro A.D., Montecchi-Palazzi L., Tasman N., Coleman M., Reisinger F., Souda P., Hermjakob H., Binz P.A., Deutsch E.W..mzML--a community standard for mass spectrometry data. Mol Cell Proteomics. 2011 Jan;10(1):R110.000133
-
 
 ## Specification documents
 
