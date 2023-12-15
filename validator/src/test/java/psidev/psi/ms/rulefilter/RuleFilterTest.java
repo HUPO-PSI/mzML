@@ -7,6 +7,7 @@ import psidev.psi.ms.Resources;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -19,7 +20,7 @@ public class RuleFilterTest {
 	public TemporaryFolder tf = new TemporaryFolder();
 
 	@Test
-	public void ruleFilterTest() {
+	public void ruleFilterTest() throws IOException {
 		File outputFolder = tf.newFolder("ruleFilterTest");
 		try {
 			File file = Resources.extractResource(FILE_RULE_FILTER, outputFolder);
@@ -35,7 +36,7 @@ public class RuleFilterTest {
 	}
 
 	@Test
-	public void ruleFilterTest2() {
+	public void ruleFilterTest2() throws IOException {
 		File outputFolder = tf.newFolder("ruleFilterTest2");
 		try {
 			System.out.println("\n\n---------------------");

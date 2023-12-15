@@ -8,7 +8,6 @@
 
 package psidev.psi.ms.mzml.mapping.jaxb;
 
-import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -125,7 +124,7 @@ public class BinaryDataArrayType
             // we only expect one such element!
             if (nl.getLength() == 1) {
                 Node data =  nl.item(0);
-                binary = Base64.decode(data.getTextContent());
+                binary = java.util.Base64.getDecoder().decode(data.getTextContent());
             } else {
                 throw new IllegalStateException("Expected only one 'binary' element, but found: " + nl.getLength());
             }

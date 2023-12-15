@@ -62,7 +62,7 @@ import uk.ac.ebi.jmzml.xml.io.MzMLUnmarshaller;
  * This class represents the PSI mzML semantic validator.
  * 
  * @author Lennart Martens, modified by Juan Antonio Vizcaino and Salvador
- *         Martínez
+ *         Martinez
  * @version $Id$
  */
 public class MzMLValidator extends Validator {

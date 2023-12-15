@@ -20,8 +20,6 @@ import java.util.Properties;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.filechooser.FileFilter;
 import javax.xml.bind.JAXBException;
 
@@ -32,10 +30,6 @@ import psidev.psi.ms.swingworker.SwingWorker;
 import psidev.psi.tools.validator.MessageLevel;
 import psidev.psi.tools.validator.ValidatorMessage;
 import psidev.psi.tools.validator.util.ValidatorReport;
-
-import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * 
@@ -885,11 +879,11 @@ public class MzMLValidatorGUI extends javax.swing.JPanel implements RuleFilterAg
 	}
 
 	public static void main(String[] args) {
-		try {
-			UIManager.setLookAndFeel(new WindowsLookAndFeel());
-		} catch (UnsupportedLookAndFeelException e) {
-			System.out.println("No Windows lookAndFeel found");
-		}
+//		try {
+//			UIManager.setLookAndFeel(new WindowsLookAndFeel());
+//		} catch (UnsupportedLookAndFeelException e) {
+//			System.out.println("No Windows lookAndFeel found");
+//		}
 		MzMLValidatorGUI jpanValidator = new MzMLValidatorGUI();
 
 		if (args != null && args.length == 1) {
